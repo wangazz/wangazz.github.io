@@ -2,15 +2,22 @@
     font-size: 16px;
 }
 
-.logo {
+.site-logo {
     font-size: 2.5rem;
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Slab', sans-serif;
     font-weight: lighter;
 }
 
-p {
+.navigation-menu {
+    font-size: 1.2rem;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: lighter;
+    text-align: right;
+}
+
+main {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 2.5;
     font-family: 'Open Sans', sans-serif;
 }
 
