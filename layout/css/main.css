@@ -10,24 +10,23 @@ body {
 }
 
 .navbar {
+    margin: 40px 0px 60px;
     display: flex;
     padding: 4rem;
 }
-
-.site-logo {
+.nav-logo {
     align-items: center;
     float: left;
     font-size: 1.5rem;
     font-family: 'Roboto Slab', sans-serif;
     font-weight: 300;
 }
-
-#navigation-menu {
+.nav-menu {
     float: right;
     clear: right;
 }
 
-#navigation-menu > li {
+.nav-menu > li {
     display: inline-flex;
     font-size: 1rem;
     font-family: 'Roboto Slab', sans-serif;
@@ -35,12 +34,12 @@ body {
     padding: 1rem;
 }
 
-#navigation-menu > li > a {
+.nav-menu > li > a {
     color: black;
     text-decoration: none;
 }
 
-#navigation-menu > li > a:hover {
+.nav-menu > li > a:hover {
     text-decoration: underline;
 }
 
@@ -52,7 +51,7 @@ main {
 }
 
 footer {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
