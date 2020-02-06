@@ -1,17 +1,21 @@
+// watchify main.js -o bundle.js -v
+
 window.addEventListener('load', () => {
-    let showdown = require('showdown'),
-        converter = new showdown.Converter(),
-        text = '#Hello World',
-        html = converter.makeHtml(text),
-        textElement = htmlToElement(html);
+    fetch('../layout/index.md')
+        .then(response => response.text())
+        .then(text => {
+            let showdown = require('showdown'),
+                converter = new showdown.Converter(),
+                html = converter.makeHtml(text),
+                textElements = htmlToElements(html);
 
-    const mainText = document.querySelector('.main-text');
-    mainText.appendChild(textElement);
-
-    function htmlToElement(html) {
-        html = html.trim();
-        let template = document.createElement('template');
-        template.innerHTML = html;
-        return template.content.firstChild;
-    }
+            const textContainer = document.querySelector('.main-text');
+            textElements.forEach(element => textContainer.appendChild(element));
+        });
 });
+
+function htmlToElements(html) {
+    let template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.childNodes;
+}

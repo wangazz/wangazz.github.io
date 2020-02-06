@@ -1,21 +1,25 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+// watchify main.js -o bundle.js -v
+
 window.addEventListener('load', () => {
-    let showdown = require('showdown'),
-        converter = new showdown.Converter(),
-        text = '#Hello World',
-        html = converter.makeHtml(text),
-        textElement = htmlToElement(html);
+    fetch('../layout/index.md')
+        .then(response => response.text())
+        .then(text => {
+            let showdown = require('showdown'),
+                converter = new showdown.Converter(),
+                html = converter.makeHtml(text),
+                textElements = htmlToElements(html);
 
-    const mainText = document.querySelector('.main-text');
-    mainText.appendChild(textElement);
-
-    function htmlToElement(html) {
-        html = html.trim();
-        let template = document.createElement('template');
-        template.innerHTML = html;
-        return template.content.firstChild;
-    }
+            const textContainer = document.querySelector('.main-text');
+            textElements.forEach(element => textContainer.appendChild(element));
+        });
 });
+
+function htmlToElements(html) {
+    let template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.childNodes;
+}
 
 },{"showdown":2}],2:[function(require,module,exports){
 ;/*! showdown v 1.9.1 - 02-11-2019 */
