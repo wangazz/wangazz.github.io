@@ -1,8 +1,11 @@
 {
+    "name": "wangazz.github.io",
+    "version": "1.0.0",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
+        "browserify": "^16.5.0",
         "showdown": "^1.9.1"
     }
 }
