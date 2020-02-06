@@ -1,5 +1,3 @@
-// watchify main.js -o bundle.js -v
-
 window.addEventListener('load', () => {
     fetch('../layout/index.md')
         .then(response => response.text())
