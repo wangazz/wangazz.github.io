@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    fetch('../layout/index.md')
+    fetch('../docs/index.md')
         .then(response => response.text())
         .then(text => {
             let showdown = require('showdown'),
