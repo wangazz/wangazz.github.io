@@ -15,8 +15,8 @@ nav.navbar {
     flex-flow: row nowrap;
     font-family: 'Roboto Slab', sans-serif;
     justify-content: space-between;
-    margin: 40px 0px 60px;
-    padding: 4rem;
+    margin: 60px 0px;
+    padding: 2rem;
 }
 .nav-header {
     align-items: center;
@@ -54,7 +54,7 @@ main {
     margin: auto;
     font-size: 1rem;
     line-height: 1.5;
-    padding: 4rem;
+    padding: 2rem;
 }
 .main-text > h1 {
     font-size: 20px;
