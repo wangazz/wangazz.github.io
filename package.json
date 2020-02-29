@@ -1,9 +1,15 @@
 {
+    "name": "wangazz.github.io",
+    "version": "0.0.0",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "watchify": "watchify ./js/main.js -o ./js/bundle.js -v"
+        "build": "watchify ./js/main.js --outfile=./js/bundle.js --verbose",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
         "showdown": "^1.9.1"
+    },
+    "devDependencies": {
+        "browserify": "^16.5.0",
+        "watchify": "^3.11.1"
     }
 }
