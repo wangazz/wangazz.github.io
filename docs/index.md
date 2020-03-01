@@ -4,4 +4,8 @@ I am a Philosophy, Politics, and Economics graduate from the University of Oxfor
 
 In my spare time, I enjoy music, debating, photography, programming, and food.
 
+[Check out my GitHub here.](https://github.com/wangazz)
+
 Feel free to contact me at andywang4 (at) outlook (dot) com.
+
+_Last updated: 01/03/2019_
