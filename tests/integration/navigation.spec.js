@@ -28,4 +28,34 @@ describe('navigation', () => {
             .contains('Projects')
             .should('be.visible');
     });
+
+    it('should navigate to the Tutorials page', () => {
+        cy.get('.nav-menu')
+            .contains('Tutorials')
+            .click();
+
+        cy.get('h1')
+            .contains('Tutorials')
+            .should('be.visible');
+    });
+
+    it('should navigate to the Gallery page', () => {
+        cy.get('.nav-menu')
+            .contains('Gallery')
+            .click();
+
+        cy.get('h1')
+            .contains('Gallery')
+            .should('be.visible');
+    });
+
+    it('should navigate to the Contact page', () => {
+        cy.get('.nav-menu')
+            .contains('Contact')
+            .click();
+
+        cy.get('h1')
+            .contains('Contact')
+            .should('be.visible');
+    });
 });

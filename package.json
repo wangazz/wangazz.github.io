@@ -8,7 +8,8 @@
         "build": "watchify ./js/main.js --outfile=./js/bundle.js --verbose",
         "build:ci": "browserify ./js/main.js --outfile=./js/bundle.js",
         "cypress:open": "cypress open",
-        "cypress:run": "cypress run"
+        "cypress:run": "cypress run",
+        "cypress:ci": "cypress run"
     },
     "dependencies": {
         "showdown": "^1.9.1"
