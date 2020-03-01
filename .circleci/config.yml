@@ -10,14 +10,14 @@ jobs:
             - node/with-cache:
                   steps:
                       - run:
-                            name: install
+                            name: Install
                             command: npm install
                       - run:
-                            name: serve
-                            command: npm start:ci
+                            name: Start live server
+                            command: npm run start:ci
                             background: true
                       - run:
-                            name: test
+                            name: Run tests
                             command: npm run cypress:run
 workflows:
     build-and-test:
