@@ -9,9 +9,16 @@ jobs:
             - checkout
             - node/with-cache:
                   steps:
-                      - run: npm install
-                      - run: npm start
-                      - run: npm run cypress:run
+                      - run:
+                            name: install
+                            command: npm install
+                      - run:
+                            name: serve
+                            command: npm start:ci
+                            background: true
+                      - run:
+                            name: test
+                            command: npm run cypress:run
 workflows:
     build-and-test:
         jobs:
