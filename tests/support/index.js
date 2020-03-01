@@ -14,7 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+require('./commands');
+
+beforeEach(() => {
+    cy.visit(Cypress.config('baseUrl'));
+});
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
