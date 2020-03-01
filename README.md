@@ -1,5 +1,8 @@
 # wangazz.github.io
 
+[![Build Status](https://circleci.com/gh/wangazz/wangazz.github.io.svg?style=shield)](https://circleci.com/gh/wangazz/wangazz.github.io)
+[![License: MIT](https://img.shields.io/github/license/wangazz/wangazz.github.io)](https://opensource.org/licenses/MIT)
+
 This is my personal website and blog. In addition to posting content I find interesting, this website will be a journal of building a modern, responsive website from scratch.
 
 I had several design considerations in building this website:
