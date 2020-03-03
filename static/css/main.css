@@ -35,9 +35,8 @@ nav.navbar {
     clear: right;
 }
 .nav-menu > li {
-    display: inline-flex;
+    display: inline-grid;
     font-size: 1rem;
-
     font-weight: 300;
     padding: 1rem;
 }
@@ -46,6 +45,34 @@ nav.navbar {
     text-decoration: none;
 }
 .nav-menu > li > a:hover {
+    text-decoration: underline;
+}
+.nav-dropdown {
+    display: inline-block;
+    position: relative;
+}
+.nav-dropdown-list {
+    display: none;
+    overflow: auto;
+    z-index: 1;
+}
+li:hover .nav-dropdown-list {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: block;
+    /* float: left; */
+    /* overflow: auto; */
+    position: relative;
+}
+.nav-dropdown-item {
+    color: black;
+    display: block;
+    /* float: none; */
+    font-size: 0.9rem;
+    padding: 12px 12px;
+    text-align: left;
+    text-decoration: none;
+}
+.nav-dropdown-item:hover {
     text-decoration: underline;
 }
 

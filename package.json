@@ -9,7 +9,7 @@
         "build:ci": "browserify ./js/main.js --outfile=./js/bundle.js",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run",
-        "cypress:ci": "cypress run"
+        "test": "cypress run"
     },
     "dependencies": {
         "showdown": "^1.9.1"
