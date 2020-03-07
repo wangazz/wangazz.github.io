@@ -7,8 +7,7 @@
         "start:ci": "live-server --host=127.0.0.1 --quiet",
         "build": "watchify ./js/main.js --outfile=./js/bundle.js --verbose",
         "build:ci": "browserify ./js/main.js --outfile=./js/bundle.js",
-        "cypress:open": "cypress open",
-        "cypress:run": "cypress run",
+        "cypress": "cypress open",
         "test": "cypress run"
     },
     "dependencies": {

@@ -1,4 +1,8 @@
 window.addEventListener('load', () => {
+    renderMarkdown();
+});
+
+function renderMarkdown() {
     fetch('./index.md')
         .then(response => response.text())
         .then(text => {
@@ -10,10 +14,10 @@ window.addEventListener('load', () => {
             const textContainer = document.querySelector('.main-text');
             textElements.forEach(element => textContainer.appendChild(element));
         });
-});
 
-function htmlToElements(html) {
-    let template = document.createElement('template');
-    template.innerHTML = html.trim();
-    return template.content.childNodes;
+    function htmlToElements(html) {
+        let template = document.createElement('template');
+        template.innerHTML = html.trim();
+        return template.content.childNodes;
+    }
 }
