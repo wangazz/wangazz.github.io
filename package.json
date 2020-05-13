@@ -1,23 +1,21 @@
 {
     "name": "wangazz.github.io",
-    "version": "0.0.0",
+    "version": "1.0.0",
+    "author": "Andy Wang",
     "license": "MIT",
     "scripts": {
-        "start": "live-server --host=127.0.0.1",
-        "start:ci": "live-server --host=127.0.0.1 --quiet",
         "build": "watchify ./js/main.js --outfile=./js/bundle.js --verbose",
-        "build:ci": "browserify ./js/main.js --outfile=./js/bundle.js",
-        "cypress": "cypress open",
-        "test": "cypress run"
+        "sass": "sass --watch styles/custom.scss styles/custom.css",
+        "start": "live-server --host=127.0.0.1",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
+        "bootstrap": "^4.5.0",
         "showdown": "^1.9.1"
     },
     "devDependencies": {
-        "browserify": "^16.5.0",
-        "cypress": "^4.1.0",
-        "eslint": "^6.8.0",
-        "eslint-plugin-cypress": "^2.10.3",
+        "browserify": "^16.5.1",
+        "eslint": "^7.0.0",
         "live-server": "^1.2.1",
         "watchify": "^3.11.1"
     }
