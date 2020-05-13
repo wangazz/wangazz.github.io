@@ -9915,6 +9915,19 @@ footer {
   padding-top: 2rem;
 }
 
+.main-text {
+  line-height: 2;
+}
+
+.main-text h1 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.main-text p {
+  margin-bottom: 20px;
+}
+
 .navbar {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
