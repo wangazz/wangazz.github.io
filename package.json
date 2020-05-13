@@ -4,15 +4,19 @@
     "author": "Andy Wang",
     "license": "MIT",
     "scripts": {
+        "build": "watchify ./js/main.js --outfile=./js/bundle.js --verbose",
         "sass": "sass --watch styles/custom.scss styles/custom.css",
         "start": "live-server --host=127.0.0.1",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "bootstrap": "^4.5.0"
+        "bootstrap": "^4.5.0",
+        "showdown": "^1.9.1"
     },
     "devDependencies": {
+        "browserify": "^16.5.1",
         "eslint": "^7.0.0",
-        "live-server": "^1.2.1"
+        "live-server": "^1.2.1",
+        "watchify": "^3.11.1"
     }
 }

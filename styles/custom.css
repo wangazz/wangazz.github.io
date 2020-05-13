@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:100,300,400");
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -9908,6 +9909,34 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+footer {
+  font-size: 0.8em;
+  padding-top: 2rem;
+}
+
+.navbar {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  padding: 3rem 2rem 4rem;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+a.dropdown-item {
+  font-weight: 300;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*# sourceMappingURL=custom.css.map */
