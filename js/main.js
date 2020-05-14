@@ -1,8 +1,25 @@
 window.addEventListener('load', () => {
+    loadNavbar();
+    loadFooter();
     renderMarkdown();
 });
 
+function loadNavbar() {
+    const navbarContainer = document.querySelector('#navbar-container');
+    fetch('static/navbar.html')
+        .then(response => response.text())
+        .then(navbarHtml => navbarContainer.innerHTML += navbarHtml);
+}
+
+function loadFooter() {
+    const footerContainer = document.querySelector('#footer-container');
+    fetch('static/footer.html')
+        .then(response => response.text())
+        .then(footerHtml => footerContainer.innerHTML += footerHtml);
+}
+
 function renderMarkdown() {
+    const textContainer = document.querySelector('.container .main-text');
     fetch('./index.md')
         .then(response => response.text())
         .then(text => {
@@ -10,8 +27,6 @@ function renderMarkdown() {
                 converter = new showdown.Converter(),
                 html = converter.makeHtml(text),
                 textElements = htmlToElements(html);
-
-            const textContainer = document.querySelector('.main-text');
             textElements.forEach(element => textContainer.appendChild(element));
         });
 

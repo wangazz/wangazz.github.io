@@ -1,9 +1,26 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 window.addEventListener('load', () => {
+    loadNavbar();
+    loadFooter();
     renderMarkdown();
 });
 
+function loadNavbar() {
+    const navbarContainer = document.querySelector('#navbar-container');
+    fetch('static/navbar.html')
+        .then(response => response.text())
+        .then(navbarHtml => navbarContainer.innerHTML += navbarHtml);
+}
+
+function loadFooter() {
+    const footerContainer = document.querySelector('#footer-container');
+    fetch('static/footer.html')
+        .then(response => response.text())
+        .then(footerHtml => footerContainer.innerHTML += footerHtml);
+}
+
 function renderMarkdown() {
+    const textContainer = document.querySelector('.container .main-text');
     fetch('./index.md')
         .then(response => response.text())
         .then(text => {
@@ -11,8 +28,6 @@ function renderMarkdown() {
                 converter = new showdown.Converter(),
                 html = converter.makeHtml(text),
                 textElements = htmlToElements(html);
-
-            const textContainer = document.querySelector('.main-text');
             textElements.forEach(element => textContainer.appendChild(element));
         });
 
