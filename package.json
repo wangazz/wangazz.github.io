@@ -5,8 +5,10 @@
     "license": "MIT",
     "scripts": {
         "build": "watchify ./js/main.js --outfile=./js/bundle.js --verbose",
+        "build:ci": "browserify ./js/main.js --outfile=./js/bundle.js",
         "sass": "sass --watch styles/custom.scss styles/custom.css",
         "start": "live-server --host=127.0.0.1",
+        "start:ci": "live-server --host=127.0.0.1 --quiet",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {

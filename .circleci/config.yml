@@ -1,0 +1,15 @@
+version: 2.1
+orbs:
+    cypress: cypress-io/cypress@1
+workflows:
+    build-and-test:
+        jobs:
+            - cypress/install:
+                  build: npm run build:ci
+            - cypress/run:
+                  start: npm run start:ci
+                #   command: npm run test
+                #   store_artifacts: true
+                #   post-steps:
+                #       - store_test_results:
+                #             path: tests/results
