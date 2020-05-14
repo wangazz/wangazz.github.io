@@ -28,7 +28,7 @@ function loadFooter() {
 }
 
 function renderMarkdown() {
-    const textContainer = document.querySelector('.container .main-text');
+    const textContainer = document.querySelector('#main-text-container');
     fetch('./index.md')
         .then(response => response.text())
         .then(text => {

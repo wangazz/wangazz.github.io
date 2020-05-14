@@ -10,7 +10,7 @@ describe('layout', () => {
     });
 
     it('should show the main content', () => {
-        cy.get('.main-text').should('be.visible');
+        cy.get('#main-text-container').should('be.visible');
     });
 
     it('should show the footer', () => {
