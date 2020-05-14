@@ -9,7 +9,7 @@
         "sass": "sass --watch styles/custom.scss styles/custom.css",
         "start": "live-server --host=127.0.0.1",
         "start:ci": "live-server --host=127.0.0.1 --quiet",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "cypress run"
     },
     "dependencies": {
         "bootstrap": "^4.5.0",
@@ -17,6 +17,7 @@
     },
     "devDependencies": {
         "browserify": "^16.5.1",
+        "cypress": "^4.5.0",
         "eslint": "^7.0.0",
         "live-server": "^1.2.1",
         "watchify": "^3.11.1"
