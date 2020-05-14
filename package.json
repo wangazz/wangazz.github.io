@@ -6,7 +6,7 @@
     "scripts": {
         "build": "watchify ./js/main.js --outfile=./js/bundle.js --verbose",
         "build:ci": "browserify ./js/main.js --outfile=./js/bundle.js",
-        "sass": "sass --watch styles/custom.scss styles/custom.css",
+        "sass": "sass --watch static/styles/custom.scss static/styles/custom.css",
         "start": "live-server --host=127.0.0.1",
         "start:ci": "live-server --host=127.0.0.1 --quiet",
         "test": "cypress run"
@@ -20,6 +20,7 @@
         "cypress": "^4.5.0",
         "eslint": "^7.0.0",
         "live-server": "^1.2.1",
+        "sass": "^1.26.5",
         "watchify": "^3.11.1"
     }
 }

@@ -2,7 +2,7 @@
     "baseUrl": "http://127.0.0.1:8080",
     "fixturesFolder": "tests/fixtures",
     "integrationFolder": "tests/integration",
-    "pluginsFile": "tests/plugins/index.js",
+    "pluginsFile": false,
     "screenshotsFolder": "tests/screenshots",
     "supportFile": "tests/support/index.js",
     "testFiles": "**/*.spec.js",
