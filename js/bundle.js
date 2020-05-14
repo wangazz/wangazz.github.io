@@ -5,11 +5,20 @@ window.addEventListener('load', () => {
     renderMarkdown();
 });
 
-function loadNavbar() {
+async function loadNavbar() {
     const navbarContainer = document.querySelector('#navbar-container');
-    fetch('static/navbar.html')
+    await fetch('static/navbar.html')
         .then(response => response.text())
         .then(navbarHtml => navbarContainer.innerHTML += navbarHtml);
+
+    const currentPage = getCurrentPage();
+    const linkToCurrentPage = $(`li :contains(${currentPage})`);
+    linkToCurrentPage.addClass('active');
+
+    function getCurrentPage() {
+        const title = document.title;
+        return title.match(/(.*) - \w+/)[1].trim();
+    }
 }
 
 function loadFooter() {
