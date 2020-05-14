@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 
 async function loadNavbar() {
     const navbarContainer = document.querySelector('#navbar-container');
-    await fetch('static/navbar.html')
+    await fetch('/static/navbar.html')
         .then(response => response.text())
         .then(navbarHtml => navbarContainer.innerHTML += navbarHtml);
 
@@ -22,7 +22,7 @@ async function loadNavbar() {
 
 function loadFooter() {
     const footerContainer = document.querySelector('#footer-container');
-    fetch('static/footer.html')
+    fetch('/static/footer.html')
         .then(response => response.text())
         .then(footerHtml => footerContainer.innerHTML += footerHtml);
 }
