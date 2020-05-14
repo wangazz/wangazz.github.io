@@ -2,7 +2,7 @@
 
 describe('navigation', () => {
     it('should navigate to the Home page', () => {
-        cy.get('.nav-header').click();
+        cy.get('.navbar-brand').click();
 
         cy.get('h1')
             .contains('About Me')
@@ -10,7 +10,7 @@ describe('navigation', () => {
     });
 
     it('should navigate to the Blog page', () => {
-        cy.get('.nav-menu')
+        cy.get('#navbar-content')
             .contains('Blog')
             .click();
 
@@ -20,9 +20,10 @@ describe('navigation', () => {
     });
 
     it('should navigate to the Projects page', () => {
-        cy.get('.nav-menu')
-            .contains('Projects')
-            .click();
+        cy.get('#navbar-content')
+            .contains('li', 'Projects')
+            .click()
+            .contains('Link 1').click();
 
         cy.get('h1')
             .contains('Projects')
@@ -30,9 +31,10 @@ describe('navigation', () => {
     });
 
     it('should navigate to the Tutorials page', () => {
-        cy.get('.nav-menu')
-            .contains('Tutorials')
-            .click();
+        cy.get('#navbar-content')
+            .contains('li', 'Tutorials')
+            .click()
+            .contains('Link 1').click();
 
         cy.get('h1')
             .contains('Tutorials')
@@ -40,7 +42,7 @@ describe('navigation', () => {
     });
 
     it('should navigate to the Gallery page', () => {
-        cy.get('.nav-menu')
+        cy.get('#navbar-content')
             .contains('Gallery')
             .click();
 
@@ -50,7 +52,7 @@ describe('navigation', () => {
     });
 
     it('should navigate to the Contact page', () => {
-        cy.get('.nav-menu')
+        cy.get('#navbar-content')
             .contains('Contact')
             .click();
 
