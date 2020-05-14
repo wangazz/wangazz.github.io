@@ -1,3 +1,0 @@
-# Projects
-
-Page under construction.
