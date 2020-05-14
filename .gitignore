@@ -108,3 +108,7 @@ tmp/
 temp/
 
 # End of https://www.gitignore.io/api/node
+
+# Cypress
+tests/screenshots/
+tests/videos/
