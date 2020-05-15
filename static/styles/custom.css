@@ -9916,16 +9916,18 @@ footer {
 }
 
 main {
+  line-height: 2;
   padding: 3rem 2rem 0rem;
 }
 
-.main-text {
-  line-height: 2;
+main h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
 }
 
-.main-text h1 {
+main h2 {
   font-size: 20px;
-  margin-bottom: 30px;
+  font-style: italic;
 }
 
 .main-text p {
