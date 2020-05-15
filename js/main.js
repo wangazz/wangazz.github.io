@@ -28,8 +28,9 @@ function loadFooter() {
 }
 
 function renderMarkdown() {
+    const fileName = location.pathname.match(/.*\/(.+).html/)[1];
     const textContainer = document.querySelector('#main-text-container');
-    fetch('./index.md')
+    fetch(`./${fileName}.md`)
         .then(response => response.text())
         .then(text => {
             let showdown = require('showdown'),
