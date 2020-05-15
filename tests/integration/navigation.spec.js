@@ -34,10 +34,10 @@ describe('navigation', () => {
         cy.get('#navbar-content')
             .contains('li', 'Tutorials')
             .click()
-            .contains('Link 1').click();
+            .contains('Raspberry Pi').click();
 
         cy.get('h1')
-            .contains('Tutorials')
+            .contains('Set Up a Raspberry Pi Without a Monitor')
             .should('be.visible');
     });
 
