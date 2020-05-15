@@ -9915,6 +9915,10 @@ footer {
   padding-top: 2rem;
 }
 
+main {
+  padding: 3rem 2rem 0rem;
+}
+
 .main-text {
   line-height: 2;
 }
@@ -9929,9 +9933,11 @@ footer {
 }
 
 .navbar {
+  background-color: white;
   font-family: "Roboto Slab", serif;
   font-weight: 300;
-  padding: 3rem 2rem 4rem;
+  opacity: 0.95;
+  padding: 1.5rem 2rem 1rem;
 }
 
 .navbar-brand {
