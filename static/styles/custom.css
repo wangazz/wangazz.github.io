@@ -9921,6 +9921,9 @@ footer .fa {
   padding: 20px;
   width: 60px;
 }
+footer .fa:hover {
+  text-decoration: none;
+}
 
 main {
   line-height: 2;
