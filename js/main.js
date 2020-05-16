@@ -1,18 +1,8 @@
 window.addEventListener('load', () => {
-    loadBlog();
     loadFooter();
     loadNavbar();
     renderMarkdown();
 });
-
-function loadBlog() {
-    const blogContainer = document.querySelector('#blog-container');
-    if (blogContainer) {
-        fetch('/static/templates/blog.html')
-            .then(response => response.text())
-            .then(blogHtml => blogContainer.innerHTML += blogHtml);
-    }
-}
 
 function loadFooter() {
     const footerContainer = document.querySelector('#footer-container');
