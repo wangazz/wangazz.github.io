@@ -1,13 +1,18 @@
 main {
-    padding: 3rem 2rem 0rem;
-}
-.main-text {
     line-height: 2;
-}
-.main-text h1 {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-.main-text p {
-    margin-bottom: 20px;
+    padding: 3rem 2rem 0rem;
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    .main-text p {
+        margin-bottom: 20px;
+    }
 }

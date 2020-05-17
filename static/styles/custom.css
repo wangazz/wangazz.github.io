@@ -9915,21 +9915,29 @@ footer {
   padding: 2rem 2rem 0rem;
   text-align: center;
 }
+footer .fa {
+  color: black;
+  font-size: 2.5em;
+  padding: 20px;
+  width: 60px;
+}
+footer .fa:hover {
+  text-decoration: none;
+}
 
 main {
+  line-height: 2;
   padding: 3rem 2rem 0rem;
 }
-
-.main-text {
-  line-height: 2;
-}
-
-.main-text h1 {
-  font-size: 20px;
+main h1 {
+  font-size: 26px;
   margin-bottom: 30px;
 }
-
-.main-text p {
+main h2 {
+  font-size: 20px;
+  font-style: italic;
+}
+main .main-text p {
   margin-bottom: 20px;
 }
 
@@ -9940,16 +9948,13 @@ main {
   opacity: 0.95;
   padding: 1.5rem 2rem 1rem;
 }
-
-.navbar-brand {
+.navbar .navbar-brand {
   font-size: 1.5em;
 }
-
-.navbar-nav li {
+.navbar .navbar-nav li {
   padding-right: 20px;
 }
-
-a.dropdown-item {
+.navbar a.dropdown-item {
   font-weight: 300;
 }
 

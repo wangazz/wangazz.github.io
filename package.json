@@ -6,7 +6,7 @@
     "scripts": {
         "build": "watchify ./js/main.js --outfile=./js/bundle.js --verbose",
         "build:ci": "browserify ./js/main.js --outfile=./js/bundle.js",
-        "sass": "sass --watch static/styles/custom.scss static/styles/custom.css",
+        "scss": "sass --watch static/styles/custom.scss static/styles/custom.css",
         "start": "live-server --host=127.0.0.1",
         "start:ci": "live-server --host=127.0.0.1 --quiet",
         "test": "cypress run"

@@ -1,12 +1,19 @@
 window.addEventListener('load', () => {
-    loadNavbar();
     loadFooter();
+    loadNavbar();
     renderMarkdown();
 });
 
+function loadFooter() {
+    const footerContainer = document.querySelector('#footer-container');
+    fetch('/static/templates/footer.html')
+        .then(response => response.text())
+        .then(footerHtml => footerContainer.innerHTML += footerHtml);
+}
+
 async function loadNavbar() {
     const navbarContainer = document.querySelector('#navbar-container');
-    await fetch('/static/navbar.html')
+    await fetch('/static/templates/navbar.html')
         .then(response => response.text())
         .then(navbarHtml => navbarContainer.innerHTML += navbarHtml);
 
@@ -18,13 +25,6 @@ async function loadNavbar() {
         const title = document.title;
         return title.match(/(.*) - \w+/)[1].trim();
     }
-}
-
-function loadFooter() {
-    const footerContainer = document.querySelector('#footer-container');
-    fetch('/static/footer.html')
-        .then(response => response.text())
-        .then(footerHtml => footerContainer.innerHTML += footerHtml);
 }
 
 function renderMarkdown() {
