@@ -23,7 +23,7 @@ describe('navigation', () => {
         cy.get('#navbar-content')
             .contains('li', 'Projects')
             .click()
-            .contains('Link 1').click();
+            .contains('Pi Trainer').click();
 
         cy.get('h1')
             .contains('Projects')
